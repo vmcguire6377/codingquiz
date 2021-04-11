@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music History Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<header>
+
+ 
+
+</header> 
+
+<body onload="askQuestion()">
+    <div id="container">
+        <div id="question">
+
+        </div>
+
+        <button id="start">START QUIZ</button>
+        <div id="qImage"> 
+        </div>
+        
+        <div id="choices">
+            <div class="choice" id="A"></div>
+            <div class="choice" id="B"></div>
+            <div class="choice" id="C"></div>
+            <div class="choice" id="D"></div>
+        </div>
+        
+        <h2 id="myTimer"></h2>
+        <div id="answers">
+            <div id="correct">0</div>
+            <div id="incorrect">0</div>
+        </div>
+        <br />
+
+        <div id="buttons">
+            <button id="next" name="nextBtn" value="next" onclick="next()">NEXT</button>
+           
+        </div>
+    </div>
+
+</body>
+<script src="./assets/js/quiz.js"></script>
+
+</html>
