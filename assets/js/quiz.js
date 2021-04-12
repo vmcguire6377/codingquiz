@@ -18,7 +18,7 @@ var choice = document.getElementsByName('choice');
 
 let questions = [{
   question: "What is the name of the best selling rock band of all time?",
-  image: "./assets/images/music-notes.PNG",
+  image: "./assets/images/music-notes.png",
   choiceA: "Led Zeppelin",
   choiceB: "The Eagles",
   choiceC: "Aerosmith",
@@ -27,7 +27,7 @@ let questions = [{
 },
 {
   question: "What is the best selling pop album of all time?",
-  image: "./assets/images/grammy.JPG",
+  image: "./assets/images/grammy.jpg",
   choiceA: "AC/DC, Back in Black",
   choiceB: "Michael Jackson, Thriller",
   choiceC: "MeatLoaf, Bat Out of Hell",
@@ -36,7 +36,7 @@ let questions = [{
 },
 {
   question: "Who is known as the 'Father of Rock'?",
-  image: "./assets/images/rock.JPG",
+  image: "./assets/images/therock.jpg",
   choiceA: "Elvis Presley",
   choiceB: "Kenny G.",
   choiceC: "Fats Domino",
@@ -45,7 +45,7 @@ let questions = [{
 },
 {
   question: "Who was the top female pop artist of the 1980s? ",
-  image: "./assets/images/pop.JPG",
+  image: "./assets/images/pop.jpg",
   choiceA: "Cher",
   choiceB: "Madonna",
   choiceC: "Whitney Houston",
