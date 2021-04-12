@@ -14,14 +14,19 @@
  
 
 </header> 
+ <p>"Welcome to MusicQuiz! Try your best and remember, an incorrect answer results in a penalty of 10 seconds!!!"</p> 
 
 <body onload="askQuestion()">
     <div id="container">
         <div id="question">
 
         </div>
-
-        <button id="start">START QUIZ</button>
+        <div id="wrapper"
+        <button id="start"></button> 
+        <button id="start">START QUIZ</button> 
+        <button id="next" name="nextBtn" value="next" onclick="next()">NEXT</button>
+        </div>
+        
         <div id="qImage"> 
         </div>
         
@@ -40,9 +45,11 @@
         <br />
 
         <div id="buttons">
-            <button id="next" name="nextBtn" value="next" onclick="next()">NEXT</button>
            
-        </div>
+           </div>
+           <div id="container">
+            <div id="endQuiz"></div>
+
     </div>
 
 </body>

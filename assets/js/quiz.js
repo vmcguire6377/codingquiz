@@ -1,8 +1,9 @@
 
-var timeLeft = document.getElementById("myTimer");
-var timerEl = timeLeft;
+var timeLeft = 75
+var timerEl = document.getElementById("myTimer");
 var startQuiz = document.getElementById("start");
 var sec = timeLeft;
+var timeDisplay = document.getElementById("myTimer")
 
 
 var question = document.getElementById("question");
@@ -50,9 +51,27 @@ let questions = [{
   choiceC: "Whitney Houston",
   choiceD: "Beyonce",
   correct: "B"
+},
+{
+  question: "Would you like to try again?",
+  choiceA: "yes",
+  choiceB: "no",
+  choiceC: "unknown",
+  choiceD: "all of the above",
+  correct: ""
 }
 ];
 
+function myTimer() {
+  console.log(timeDisplay);
+  timerEl.innerHTML = timeLeft + "sec left";
+  sec--;
+}
+
+function endQuiz() {
+  if (runningquestion.questions === 0 || timeLeft === 0)
+    window.prompt("The game is over. Please enter your name.")
+}
 
 var lastquestion = questions.length - 1;
 let runningquestion = 0;
@@ -61,16 +80,25 @@ let cor = 0, inc = 0;
 
 startQuiz.addEventListener("click", function () {
   countdown();
-})
+}
+)
 
 function countdown() {
-  var sec = 75;
-  var time = setInterval(myTimer, 1000);
-
-  function myTimer() {
-    timeLeft.innerHTML = sec + "sec left";
-    sec--;
-  }
+  var timeInterval = setInterval(function () {
+    console.log("timeLeft", timeLeft);
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + "seconds left";
+      timeLeft--;
+    }
+    else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + "second left";
+      timeLeft--;
+    }
+    else {
+      timerEl.textContent = "";
+      clearInterval(timeInterval);
+    }
+  }, 1000);
 
 }
 
@@ -88,12 +116,10 @@ function askQuestion() {
 function score() {
   correct.innerHTML = "Correct : " + cor;
   incorrect.innerHTML = "Incorrect : " + inc;
-
 }
 
 function next() {
   for (var i = 0; i < choice.length; i++) {
-    console.log(choice[i]);
     if (choice[i].checked) {
       if (choice[i].value === q.correct) {
         alert("You Are Correct!");
@@ -101,21 +127,30 @@ function next() {
       }
       else {
         alert("You are incorrect.");
+        console.log("inc", inc);
         inc++;
-
+        timeLeft = timeLeft - 10;
+        console.log(timeLeft);
       }
+    }
 
+  }
+
+  function endQuiz () {
+    if(timerEl.textContent = "") {
+      window.alert("The quiz is over")
     }
   }
 
   runningquestion++;
   askQuestion();
-  
+  endQuiz();
 }
 
-function endQuiz () {
-  window.prompt("Please enter your name")
-}
+localStorage.setItem("score", JSON.stringify(score));
+
+
+
 
 
 
