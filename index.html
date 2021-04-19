@@ -2,57 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music History Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Coding Quiz</title>
 
+	<link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<header>
 
- 
+<body>
+	<div class="scores"><a href="highscores.html">View Highscores</a></div>
 
-</header> 
- <p>"Welcome to MusicQuiz! Try your best and remember, an incorrect answer results in a penalty of 10 seconds!!!"</p> 
+	<div class="timer">Time: <span id="time">0</span></div>
 
-<body onload="askQuestion()">
-    <div id="container">
-        <div id="question">
+	<div class="wrapper">
+		<div id="start-screen" class="start">
+			<h1>Coding Quiz Challenge</h1>
+			<p>
+				Try to answer the following code-related questions within the time
+				limit. Keep in mind that incorrect answers will penalize your
+				score/time by ten seconds!
+			</p>
+			<button id="start">Start Quiz</button>
+		</div>
 
-        </div>
-        <div id="wrapper"
-        <button id="start"></button> 
-        <button id="start">START QUIZ</button> 
-        <button id="next" name="nextBtn" value="next" onclick="next()">NEXT</button>
-        </div>
-        
-        <div id="qImage"> 
-        </div>
-        
-        <div id="choices">
-            <div class="choice" id="A"></div>
-            <div class="choice" id="B"></div>
-            <div class="choice" id="C"></div>
-            <div class="choice" id="D"></div>
-        </div>
-        
-        <h2 id="myTimer"></h2>
-        <div id="answers">
-            <div id="correct">0</div>
-            <div id="incorrect">0</div>
-        </div>
-        <br />
+		<div id="questions" class="hide">
+			<h2 id="question-title"></h2>
+			<div id="choices" class="choices"></div>
+		</div>
 
-        <div id="buttons">
-           
-           </div>
-           <div id="container">
-            <div id="endQuiz"></div>
+		<div id="end-screen" class="hide">
+			<h2>All done!</h2>
+			<p>Your final score is <span id="final-score"></span>.</p>
+			<p>
+				Enter initials: <input type="text" id="initials" max="3" />
+				<button id="submit">Submit</button>
+			</p>
+		</div>
 
-    </div>
+		<div id="feedback" class="feedback hide"></div>
+	</div>
 
+	<script src="./assets/js/quiz.js"></script>
+	<script src="./assets/js/mainEl.js"></script>
 </body>
-<script src="./assets/js/quiz.js"></script>
 
 </html>
