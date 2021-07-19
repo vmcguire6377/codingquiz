@@ -8,3 +8,7 @@ The user is notified whether they are correct or incorrect, the score is tallied
 In the case of an incorrect answer the user is penalized 10 seconds of time.
 
 The user has the option to store their name at the end of the quiz.
+
+Built With: HTML, CSS, JavaScript
+
+![codequiz](https://user-images.githubusercontent.com/79176079/126213928-b3e6c740-1ea4-466b-abd4-55dab4effd22.PNG)
