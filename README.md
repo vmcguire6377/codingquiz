@@ -1,4 +1,4 @@
-# codingquiz
+# Coding Quiz
 This quiz is intended to display trivia questions to the user, each question associated with four possible answers.
 
 The user should be able to select an answer, click the next button, and have their answer choice evaluated as correct or incorrect. 
